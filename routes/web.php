@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/nalog', 'NalogController@index');
+Route::post('/nalog/send', 'NalogController@send');
+
+Route::get('/test', 'NalogController@test');
