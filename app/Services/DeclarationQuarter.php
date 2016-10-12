@@ -18,9 +18,9 @@ class DeclarationQuarter implements IDeclaration
 
     private $dateService;
 
-    public function __construct()
+    public function __construct(IDateService $dateService)
     {
-        $this->dateService = new DateService();
+        $this->dateService = $dateService;
     }
 
     function getDate($locale, $dateFrom, $dateTo, $currentYear)

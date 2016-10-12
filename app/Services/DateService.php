@@ -13,7 +13,7 @@ use App\Holiday;
 use DateInterval;
 use DateTime;
 
-class DateService
+class DateService implements IDateService
 {
     protected function validateEndDate(DateTime $date){
 

@@ -11,15 +11,18 @@ namespace App\Services;
 
 class DeclarationFactory
 {
+
+
     public static function create($group){
         $class = null;
+        $dateService = new DateService();
         switch($group){
-            case 1: $class =  new DeclarationYear(); break;
-            case 2: $class =  new DeclarationYear(); break;
-            case 3: $class =  new DeclarationQuarter(); break;
-            case 4: $class = new DeclarationQuarter(); break;
-            case 5: $class = new DeclarationQuarter(); break;
-            case 6: $class = new DeclarationQuarter(); break;
+            case 1: $class =  new DeclarationYear($dateService); break;
+            case 2: $class =  new DeclarationYear($dateService); break;
+            case 3: $class =  new DeclarationQuarter($dateService); break;
+            case 4: $class = new DeclarationQuarter($dateService); break;
+            case 5: $class = new DeclarationQuarter($dateService); break;
+            case 6: $class = new DeclarationQuarter($dateService); break;
         }
 
         return $class;
